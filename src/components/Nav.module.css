@@ -1,0 +1,23 @@
+.navigation{
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px;
+}
+
+.links{
+	list-style: none;
+	display: flex;
+}
+
+.link{
+	padding-right: 10px;	
+	color: white;
+	text-decoration: none;
+}
+
+.active{
+	color: gray;
+}
