@@ -5,6 +5,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 12px;
+	opacity: 0.66;
 }
 
 .links{
@@ -13,11 +14,14 @@
 }
 
 .link{
-	padding-right: 10px;	
+	padding: 6.6px;	
 	color: white;
 	text-decoration: none;
+	border: 1px solid white;
+	margin: 5px;
 }
 
 .active{
 	color: gray;
+	opacity: 0.77;
 }
