@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Easy way to setup routes with React
 
+`git clone https://github.com/the-akira/react-routes.git`
+
 ### Available Scripts
 
 In the project directory, you can run:
