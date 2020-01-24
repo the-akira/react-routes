@@ -1,6 +1,6 @@
 .navigation{
 	background-color: black;
-	color: white;
+	color: #adb2b8;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -15,9 +15,9 @@
 
 .link{
 	padding: 6.6px;	
-	color: white;
+	color: #adb2b8;
 	text-decoration: none;
-	border: 1px solid white;
+	border: 1px solid #adb2b8;
 	margin: 5px;
 }
 

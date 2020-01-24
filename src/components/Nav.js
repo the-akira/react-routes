@@ -2,11 +2,15 @@ import {
 	BrowserRouter as Router, 
 	Switch, 
 	Route, 
-	NavLink
+	NavLink,
+  Redirect
 } from 'react-router-dom';
 import React from 'react';
 import About from './About';
 import Home from './Home';
+import NotFound from "./NotFound"
+import Posts from './Posts';
+import PostDetails from './PostDetails';
 import style from './Nav.module.css';
 
 const Nav = () => {
@@ -21,12 +25,19 @@ const Nav = () => {
         		<NavLink className={style.link} activeClassName={style.active} to="/about">
         			<li>About</li>
         		</NavLink>
+            <NavLink className={style.link} activeClassName={style.active} to="/posts">
+              <li>Posts</li>
+            </NavLink>
       	  </ul>
       	</div>
 
     		<Switch>
+          <Route path="/posts/:id/" component={PostDetails} />
+          <Route path="/posts" render={props => <Posts {...props}/>} />
+          <Route path="/about" exact component={About} />
+          <Route path="/not-found" component={NotFound} />
     			<Route path="/" exact component={Home} />
-    			<Route path="/about" exact component={About} />
+          <Redirect to="/not-found" />
     		</Switch>
       </div>
     </Router>
