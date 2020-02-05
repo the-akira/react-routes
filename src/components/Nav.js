@@ -1,5 +1,5 @@
 import { 
-	BrowserRouter as Router, 
+	HashRouter as Router, 
 	Switch, 
 	Route, 
 	NavLink,
@@ -32,12 +32,12 @@ const Nav = () => {
       	</div>
 
     		<Switch>
+    			<Route path="/" exact component={Home} />
           <Route path="/posts/:id/" component={PostDetails} />
           <Route path="/posts" render={props => <Posts {...props}/>} />
           <Route path="/about" exact component={About} />
           <Route path="/not-found" component={NotFound} />
-    			<Route path="/" exact component={Home} />
-          <Redirect to="/not-found" />
+          <Redirect path="*" to="/not-found" />
     		</Switch>
       </div>
     </Router>
