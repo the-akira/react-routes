@@ -1,8 +1,8 @@
 import { 
-	HashRouter as Router, 
-	Switch, 
-	Route, 
-	NavLink,
+  HashRouter as Router, 
+  Switch, 
+  Route, 
+  NavLink,
   Redirect
 } from 'react-router-dom';
 import React from 'react';
@@ -17,28 +17,28 @@ const Nav = () => {
   return (
     <Router>
       <div>
-      	<div className={style.navigation}>
-      	  <ul className={style.links}>
-        		<NavLink exact={true} className={style.link} activeClassName={style.active} to="/">
-        			<li>Home</li>
-        		</NavLink>
-        		<NavLink className={style.link} activeClassName={style.active} to="/about">
-        			<li>About</li>
-        		</NavLink>
+        <div className={style.navigation}>
+          <ul className={style.links}>
+            <NavLink exact={true} className={style.link} activeClassName={style.active} to="/">
+              <li>Home</li>
+            </NavLink>
+            <NavLink className={style.link} activeClassName={style.active} to="/about">
+              <li>About</li>
+            </NavLink>
             <NavLink className={style.link} activeClassName={style.active} to="/posts">
               <li>Posts</li>
             </NavLink>
-      	  </ul>
-      	</div>
+          </ul>
+        </div>
 
-    		<Switch>
-    			<Route path="/" exact component={Home} />
+        <Switch>
+          <Route path="/" exact component={Home} />
           <Route path="/posts/:id/" component={PostDetails} />
           <Route path="/posts" render={props => <Posts {...props}/>} />
           <Route path="/about" exact component={About} />
           <Route path="/not-found" component={NotFound} />
           <Redirect path="*" to="/not-found" />
-    		</Switch>
+        </Switch>
       </div>
     </Router>
   );

@@ -2,14 +2,14 @@ import React from 'react';
 
 class PostDetails extends React.Component {
   state = {
-  	id: null
+    id: null
   }	
 
   componentDidMount(){
-  	let id = this.props.match.params.id;
-  	this.setState({
-  		id: id
-  	})
+    let id = this.props.match.params.id;
+    this.setState({
+      id: id
+    })
   }
   render() {
     return (
